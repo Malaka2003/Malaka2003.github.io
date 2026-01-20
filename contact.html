@@ -5,42 +5,122 @@
 <title>Contact | Ella Cloudscape Café</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* Contact form styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+header {
+    background: rgba(15,23,42,0.85);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+section {
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+h2 {
+    color: #0f766e;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Contact info */
+.contact-info {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Form styling */
 .contact-form {
-    max-width: 600px;
-    margin: 30px auto;
+    max-width: 500px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
     font-size: 16px;
-    width: 100%;
+    resize: none;
 }
+
 .contact-form button {
-    background: #16a34a;
-    color: white;
-    padding: 14px;
-    font-size: 18px;
+    padding: 12px;
     border: none;
-    border-radius: 25px;
+    border-radius: 12px;
+    background-color: #16a34a;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s;
 }
+
 .contact-form button:hover {
-    background: #15803d;
+    background-color: #0f766e;
 }
-section h2 {
-    text-align: center;
-    margin-top: 100px;
-    color: #0f766e;
-}
+
+/* Map styling */
 iframe {
     margin-top: 40px;
-    border-radius: 15px;
+    border-radius: 12px;
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* WhatsApp floating button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 16px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media(max-width:600px){
+    nav a { display: block; margin: 10px 0; }
+    h2 { font-size: 28px; }
 }
 </style>
 </head>
@@ -56,17 +136,20 @@ iframe {
 
 <section>
 <h2>Contact Us</h2>
-<p style="text-align:center;">📞 +94 78 119 2871</p>
 
-<!-- Formspree Contact Form -->
+<div class="contact-info">
+<p>📞 +94 78 119 2871</p>
+<p>📧 ellacloudscapecafe@gmail.com</p>
+<p>📌 Ella, Sri Lanka</p>
+</div>
+
 <form action="https://formspree.io/f/xreellae" method="POST" class="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
 </form>
 
-<!-- Google Map -->
 <iframe 
 src="https://www.google.com/maps?q=Ella+Cloudscape+Cafe&output=embed"
 width="100%" 
@@ -76,7 +159,7 @@ loading="lazy">
 </iframe>
 
 <footer>© 2026 Ella Cloudscape Café</footer>
-<a class="whatsapp" href="https://wa.me/94781192871">💬</a>
+<a class="whatsapp" href="https://wa.me/94781192871" target="_blank">💬</a>
 
 </body>
 </html>
