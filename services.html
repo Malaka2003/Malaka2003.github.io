@@ -1,30 +1,96 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Menu | Ella Cloudscape Café</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <img src="logo.png">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Menu</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Menu</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
+
 <section>
 <h2>Our Menu</h2>
+
+<div class="filters">
+<button onclick="filterMenu('all')" class="active">All</button>
+<button onclick="filterMenu('roti')">Roti</button>
+<button onclick="filterMenu('juice')">Juice</button>
+<button onclick="filterMenu('milkshake')">Milkshake</button>
+<button onclick="filterMenu('rice')">Fried Rice</button>
+<button onclick="filterMenu('rice&curry')">Rice & Curry</button>
+<button onclick="filterMenu('kottu')">Kottu</button>
+<button onclick="filterMenu('sweets')">Sweets</button>
+<button onclick="filterMenu('buns')">Bins</button>
+<button onclick="filterMenu('milkshake')">Milkshake</button>
+</div>
+
 <div class="cards">
-<div class="card"><h3>Roti</h3><p>Vegetable, Coconut, Fish, Chicken, Egg, Banana, Chocolate</p></div>
-<div class="card"><h3>Tea</h3><p>Milk Tea, Ginger, Green, Cinnamon</p></div>
-<div class="card"><h3>Juice</h3><p>Mango, King Coconut, Orange, Mix</p></div>
-<div class="card"><h3>Rice & Curry</h3><p>Egg, Fish, Chicken, Vegetable</p></div>
+<div class="card roti"><img src="roti-vegetable.jpg"><h4>Vegetable Roti</h4></div>
+<div class="card roti"><img src="roti-coconut.jpg"><h4>Coconut Roti</h4></div>
+<div class="card roti"><img src="parata.jpg"><h4>Parata</h4></div>
+<div class="card roti"><img src="roti-fish.jpg"><h4>Fish Roti</h4></div>
+<div class="card roti"><img src="roti-chicken.jpg"><h4>Chicken Roti</h4></div>
+<div class="card roti"><img src="roti-egg.jpg"><h4>Egg Roti</h4></div>
+<div class="card roti"><img src="roti-mango.jpg"><h4>Mango Roti</h4></div>
+<div class="card roti"><img src="roti-banana.jpg"><h4>Banana Roti</h4></div>
+<div class="card roti"><img src="roti-chocolate.jpg"><h4>Chocolate Roti</h4></div>
+<div class="card juice"><img src="juice-mango.jpg"><h4>Mango Juice</h4></div>
+<div class="card juice"><img src="juice-king.jpg"><h4>King Coconut</h4></div>
+<div class="card juice"><img src="juice-orange.jpg"><h4>Orange</h4></div>
+<div class="card juice"><img src="juice-banana.jpg"><h4>Banana</h4></div>
+<div class="card juice"><img src="juice-banana&vanila.jpg"><h4>Banana & Vanila</h4></div>
+<div class="card juice"><img src="juice-pineapple.jpg"><h4>Pineapple</h4></div>
+<div class="card juice"><img src="juice-Watermelon.jpg"><h4>Watermelon</h4></div>
+<div class="card juice"><img src="juice-papaya.jpg"><h4>Papaya</h4></div>
+<div class="card juice"><img src="juice-lime.jpg"><h4>Lime</h4></div>
+<div class="card juice"><img src="juice-mix.jpg"><h4>Mix</h4></div>
+<div class="card rice"><img src="rice-egg.jpg"><h4>Egg Rice</h4></div>
+<div class="card rice"><img src="rice-fish.jpg"><h4>Fish Rice</h4></div>
+<div class="card rice"><img src="rice-chicken.jpg"><h4>Chicken Rice</h4></div>
+<div class="card rice"><img src="rice-vegetable.jpg"><h4>Vegetable Rice</h4></div>
+<div class="card rice"><img src="rice-mix.jpg"><h4>Mix Rice</h4></div>
+<div class="card rice&curry"><img src="eggrc.jpg"><h4>Egg Rice&Curry</h4></div>
+<div class="card rice&curry"><img src="chickenrc.jpg"><h4>Chicken Rice&Curry</h4></div>
+<div class="card rice&curry"><img src="fishrc.jpg"><h4>Fish Rice&Curry</h4></div>
+<div class="card rice&curry"><img src="nrc.jpg"><h4>Normal Rice&Curry</h4></div>
+<div class="card kottu"><img src="kottu-vegetable.jpg"><h4>Vegetable Kottu</h4></div>
+<div class="card kottu"><img src="kottu-egg.jpg"><h4>Egg Kottu</h4></div>
+<div class="card kottu"><img src="kottu-fish.jpg"><h4>Fish Kottu</h4></div>
+<div class="card kottu"><img src="kottu-chicken.jpg"><h4>Chicken Kottu</h4></div>
+<div class="card kottu"><img src="kottu-mix.jpg"><h4>Mix Kottu</h4></div>
+<div class="card sweets"><img src="donut.jpg"><h4>Donut</h4></div>
+<div class="card sweets"><img src="bcake.jpg"><h4>Butter Cake</h4></div>
+<div class="card sweets"><img src="ccake.jpg"><h4>Chocolate Cake</h4></div>
+<div class="card buns"><img src="ebun.jpg"><h4>Egg Bun</h4></div>
+<div class="card buns"><img src="hbun.jpg"><h4>Hot Dog</h4></div>
+<div class="card buns"><img src="bbun.jpg"><h4>Burger</h4></div>
+<div class="card buns"><img src="sbun.jpg"><h4>Sausage Bun</h4></div>
+<div class="card milkshake"><img src="cm.jpg"><h4>Chocolate Milkshake</h4></div>
+<div class="card milkshake"><img src="vm.jpg"><h4>Vanila Milkshake</h4></div>
+<div class="card milkshake"><img src="mm.jpg"><h4>Mango Milkshake</h4></div>
+<div class="card milkshake"><img src="ic.jpg"><h4>Ice Coffee</h4></div>
 </div>
 </section>
+
 <footer>© 2026 Ella Cloudscape Café</footer>
 <a class="whatsapp" href="https://wa.me/94781192871">💬</a>
+
+<script>
+function filterMenu(category){
+const items=document.querySelectorAll('.card');
+const buttons=document.querySelectorAll('.filters button');
+buttons.forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+items.forEach(item=>{
+item.style.display=(category==='all'||item.classList.contains(category))?'block':'none';
+});
+}
+</script>
 </body>
 </html>
